@@ -53,10 +53,6 @@
       <Project>{59b60f8a-d54c-427c-860c-1005b55719f0}</Project>
       <Name>Vic.SportsStore.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Vic.SportsStore.WebApp\Vic.SportsStore.WebApp.csproj">
-      <Project>{38b1d684-d21f-459f-acc8-446c4fdf125e}</Project>
-      <Name>Vic.SportsStore.WebApp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
