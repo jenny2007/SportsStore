@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using Vic.SportsStore.Domain.Abstract;
 using Vic.SportsStore.Domain.Concrete;
 
@@ -17,7 +20,7 @@ namespace Vic.SportsStore.WebApp
                 .PropertiesAutowired();
             builder
                 .RegisterInstance<IProductsRepository>(new
-            InMemoryProductsRepository())
+            EFProductRepository())
                 .PropertiesAutowired();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
