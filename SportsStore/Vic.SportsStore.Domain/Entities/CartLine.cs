@@ -12,3 +12,4 @@ namespace Vic.SportsStore.Domain.Entities
         public int Quantity { get; set; }
     }
 }
+

@@ -1,7 +1,5 @@
 ﻿@model Vic.SportsStore.WebApp.Models.CartIndexViewModel
-@{
-    ViewBag.Title = "Sports Store: Your Cart";
-}
+@{ ViewBag.Title = "Sports Store: Your Cart"; }
 <style>
     #cartTable td {
         vertical-align: middle;
@@ -20,23 +18,22 @@
     <tbody>
         @foreach (var line in Model.Cart.Lines)
         {
-            <tr>
-                <td class="text-center">@line.Quantity</td>
-                <td class="text-left">@line.Product.Name</td>
-                <td class="text-right">@line.Product.Price.ToString("c")</td>
-                <td class="text-right">
-                    @((line.Quantity * line.Product.Price).ToString("c"))
-                </td>
-                <td>
-                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
-                    {
-                        @Html.Hidden("ProductId", line.Product.ProductId)
-                        @Html.HiddenFor(x => x.ReturnUrl)
-                        <input class="btn btn-sm btn-warning" type="submit" value="Remove" />
-                    }
-                </td>
-            </tr>
-        }
+<tr>
+    <td class="text-center">@line.Quantity</td>
+    <td class="text-left">@line.Product.Name</td>
+    <td class="text-right">@line.Product.Price.ToString("c")</td>
+    <td class="text-right">
+        @((line.Quantity * line.Product.Price).ToString("c"))
+    </td>
+    <td>
+        @using (Html.BeginForm("RemoveFromCart", "Cart"))
+        {
+@Html.Hidden("ProductId", line.Product.ProductId)
+                    @Html.HiddenFor(x => x.ReturnUrl)
+                                        <input class="btn btn-sm btn-warning" type="submit" value="Remove" />}
+    </td>
+</tr>
+}
     </tbody>
     <tfoot>
         <tr>
