@@ -11,4 +11,5 @@ namespace Vic.SportsStore.Domain.Abstract
     {
         void ProcessOrder(Cart cart, ShippingDetails shippingDetails);
     }
+
 }
