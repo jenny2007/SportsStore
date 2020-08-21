@@ -82,12 +82,36 @@
     <Compile Include="Entities\CartLine.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
+    <Compile Include="Migrations\202008021621525_InitialCreate.cs" />
+    <Compile Include="Migrations\202008021621525_InitialCreate.designer.cs">
+      <DependentUpon>202008021621525_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008202308509_ProductRev1.cs" />
+    <Compile Include="Migrations\202008202308509_ProductRev1.designer.cs">
+      <DependentUpon>202008202308509_ProductRev1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008202329534_ProductRev2.cs" />
+    <Compile Include="Migrations\202008202329534_ProductRev2.designer.cs">
+      <DependentUpon>202008202329534_ProductRev2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <Compile Include="Entities\EmailSettings.cs" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202008021621525_InitialCreate.resx">
+      <DependentUpon>202008021621525_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008202308509_ProductRev1.resx">
+      <DependentUpon>202008202308509_ProductRev1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008202329534_ProductRev2.resx">
+      <DependentUpon>202008202329534_ProductRev2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

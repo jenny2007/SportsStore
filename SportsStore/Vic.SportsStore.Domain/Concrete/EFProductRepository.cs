@@ -35,14 +35,15 @@ namespace Vic.SportsStore.Domain.Concrete
             }
             else
             {
-                Product dbEntry = context.Products.Find(product.ProductId); 
-                // Product dbEntry = context.Products.FirstorDefault(x => x.ProductId == product.ProductId);
+                Product dbEntry = context.Products.Find(product.ProductId);
                 if (dbEntry != null)
                 {
                     dbEntry.Name = product.Name;
                     dbEntry.Description = product.Description;
                     dbEntry.Price = product.Price;
                     dbEntry.Category = product.Category;
+                    dbEntry.ImageData = product.ImageData;
+                    dbEntry.ImageMimeType = product.ImageMimeType;
                 }
             }
             context.SaveChanges();
