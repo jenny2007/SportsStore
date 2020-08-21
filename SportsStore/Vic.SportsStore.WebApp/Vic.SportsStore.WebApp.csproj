@@ -133,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelpers\PagingHelpers.cs" />
+    <Compile Include="Infrastructure\Concret\DbAuthProviderfixuser.cs" />
     <Compile Include="Infrastructure\Concret\DbAuthProvider.cs" />
     <Compile Include="Infrastructure\Concret\FormsAuthProvider.cs" />
     <Compile Include="IocConfig.cs" />

@@ -11,7 +11,9 @@ namespace Vic.SportsStore.Domain.Concrete
     public class EFDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
-       // public DbSet<Product2> Products2 { get; set; }
-       // public DbSet<Product3> Products3 { get; set; }
+        public DbSet<LoginUser> LoginUsers { get; set; }
+
+        // public DbSet<Product2> Products2 { get; set; }
+        // public DbSet<Product3> Products3 { get; set; }
     }
 }

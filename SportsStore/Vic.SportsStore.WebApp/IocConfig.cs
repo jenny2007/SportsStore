@@ -35,6 +35,10 @@ namespace Vic.SportsStore.WebApp
                 .RegisterInstance<IAuthProvider>(new DbAuthProvider())
                 .PropertiesAutowired();
 
+            builder
+                .RegisterInstance(new EFDbContext())
+                .PropertiesAutowired();
+
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }

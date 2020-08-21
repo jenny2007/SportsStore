@@ -80,6 +80,7 @@
     <Compile Include="Concrete\InMemoryProductsRepository.cs" />
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\CartLine.cs" />
+    <Compile Include="Entities\LoginUser.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Migrations\202008021621525_InitialCreate.cs" />
@@ -93,6 +94,10 @@
     <Compile Include="Migrations\202008202329534_ProductRev2.cs" />
     <Compile Include="Migrations\202008202329534_ProductRev2.designer.cs">
       <DependentUpon>202008202329534_ProductRev2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008210009084_addLogUsers.cs" />
+    <Compile Include="Migrations\202008210009084_addLogUsers.designer.cs">
+      <DependentUpon>202008210009084_addLogUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008202329534_ProductRev2.resx">
       <DependentUpon>202008202329534_ProductRev2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008210009084_addLogUsers.resx">
+      <DependentUpon>202008210009084_addLogUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
